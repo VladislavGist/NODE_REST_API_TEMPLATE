@@ -1,0 +1,11 @@
+{
+  "name": "PayPetsREST_API",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "VladislavDruzhbinskiy",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
