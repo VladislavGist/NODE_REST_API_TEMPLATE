@@ -4,8 +4,8 @@ const generateId = () => {
 	return Math.random()
 }
 
-const encrypt = (cb, pass) => {
-	return bcrypt.genSalt(12, (err, salt) => {
+const encrypt = (cb, pass) =>
+	bcrypt.genSalt(12, (err, salt) => {
 		if (err) return cb(err)
 		bcrypt.hash(pass, salt)
 			.then(hash => {
@@ -15,11 +15,6 @@ const encrypt = (cb, pass) => {
 				cb(err)
 			})
 	})
-}
-
-const compressionImage = () => {
-
-}
 
 module.exports = {
 	generateId,

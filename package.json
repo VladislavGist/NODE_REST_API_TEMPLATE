@@ -1,18 +1,21 @@
 {
-  "name": "PayPetsREST_API",
+  "name": "REST_API",
   "version": "1.0.0",
   "main": "index.js",
   "author": "VladislavDruzhbinskiy",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon node index.js",
+    "prod": "NODE_ENV=production node index.js"
   },
   "dependencies": {
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "path": "^0.12.7",
-    "redis": "^2.8.0"
+    "nodemon": "^1.18.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
   }
 }

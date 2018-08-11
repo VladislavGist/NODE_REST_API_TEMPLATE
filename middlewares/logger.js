@@ -1,5 +1,10 @@
 function logger(req, res, next) {
-	console.log(`method: ${ req.method }, url: ${ req.url }`)
+	const env = process.env.NODE_ENV
+
+	if (env !== 'production') {
+		console.log(`method: ${ req.method }, url: ${ req.url }, isAuth: ${ req.session.uid ? 'true' : 'false' }`)	
+	}
+	
 	next()
 }
 
