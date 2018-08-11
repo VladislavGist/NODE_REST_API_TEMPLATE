@@ -3,7 +3,6 @@ Template for creating REST API
 
 The template was created for effective start of commercial development of REST API.
 Specially not added DB's
-__
 
 Technology stack:
 --
