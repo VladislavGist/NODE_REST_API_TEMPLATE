@@ -2,9 +2,10 @@ const router = require('express').Router()
 
 const moduleName = '/auth'
 
-const AuthModule = require('../models/Auth')
-const Auth = new AuthModule()
+const Auth = require('../models/Auth')
 
-router.get(moduleName, Auth.login)
+router.post(`${ moduleName }/login`, Auth.login)
+router.post(`${ moduleName }/register`, Auth.register)
+router.get(`${ moduleName }/logout`, Auth.logout)
 
 module.exports = router

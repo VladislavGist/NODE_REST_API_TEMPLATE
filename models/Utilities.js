@@ -1,15 +1,28 @@
-class Utilities {
-	generateId() {
-		return Math.random()
-	}
+const bcrypt = require('bcrypt')
 
-	encrypt() {
-
-	}
-
-	compressionImage() {
-
-	}
+const generateId = () => {
+	return Math.random()
 }
 
-module.exports = Utilities
+const encrypt = (cb, pass) => {
+	return bcrypt.genSalt(12, (err, salt) => {
+		if (err) return cb(err)
+		bcrypt.hash(pass, salt)
+			.then(hash => {
+				cb(null, hash, salt)
+			})
+			.catch(err => {
+				cb(err)
+			})
+	})
+}
+
+const compressionImage = () => {
+
+}
+
+module.exports = {
+	generateId,
+	encrypt,
+	compressionImage
+}

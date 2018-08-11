@@ -8,8 +8,11 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "path": "^0.12.7"
+    "express-session": "^1.15.6",
+    "path": "^0.12.7",
+    "redis": "^2.8.0"
   }
 }
